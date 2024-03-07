@@ -10,19 +10,20 @@
 
     <TextView
         android:id="@+id/daysView"
-        android:layout_width="350dp"
-        android:layout_height="121dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="335dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="180dp"
         android:shadowColor="#333333"
         android:shadowDx="10"
         android:shadowDy="10"
         android:shadowRadius="20"
-        android:text="TextView"
+        android:text="@string/Num"
         android:textAlignment="center"
         android:textColor="@color/yellow"
         android:textSize="96sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,26 +31,26 @@
         android:id="@+id/zalyshok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/zalyshok"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/daysView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/zalyshok"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="328dp"
+        android:layout_marginTop="16dp"
         android:text="@string/dniv"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/daysView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

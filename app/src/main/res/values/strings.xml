@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Dembel</string>
     <string name="zalyshok">До дємбеля лишилося</string>
+    <string name="Num">OO</string>
+
     <string name="dniv">днів</string>
 </resources>
