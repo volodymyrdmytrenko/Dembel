@@ -3,15 +3,11 @@ package ua.com.slon.dembel;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import java.util.Calendar;
-import java.util.Date;
 
-import org.w3c.dom.Text;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,9 +18,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        long dmbTimeMillis = new Date(2024 - 1900, Calendar.MAY, 23).getTime();
-        long currentTimeMillis = new Date().getTime();
-        int days = (int) ((dmbTimeMillis - currentTimeMillis) / (1000 * 60 * 60 * 24));
+        long today = 0;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            today = LocalDate.now().toEpochDay();
+        }
+        long dmbDate = 0;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            dmbDate = LocalDate.of(2024,5,23).toEpochDay();
+        }
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            Duration elapsed = Duration.between( Instant.ofEpochMilli( dmbDate ) , Instant.now() );
+        }
+        long days = dmbDate-today;
 
         TextView daysView = findViewById(R.id.daysView);
         daysView.setText(String.valueOf(days));
