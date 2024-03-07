@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/mili"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bgackground">
 
     <TextView
         android:id="@+id/daysView"
@@ -34,6 +34,7 @@
         android:layout_marginBottom="16dp"
         android:text="@string/zalyshok"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/daysView"
@@ -48,6 +49,7 @@
         android:layout_marginTop="16dp"
         android:text="@string/dniv"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
