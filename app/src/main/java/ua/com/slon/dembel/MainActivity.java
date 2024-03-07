@@ -2,11 +2,7 @@ package ua.com.slon.dembel;
 
 import android.os.Bundle;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import java.time.Duration;
-import java.time.Instant;
 import java.time.LocalDate;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
         long dmbDate = 0;
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             dmbDate = LocalDate.of(2024,5,23).toEpochDay();
-        }
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            Duration elapsed = Duration.between( Instant.ofEpochMilli( dmbDate ) , Instant.now() );
         }
         long days = dmbDate-today;
 
